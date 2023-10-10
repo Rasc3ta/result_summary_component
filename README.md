@@ -26,9 +26,9 @@ Users should be able to:
 - **Bonus**: Use the local JSON data to dynamically populate the content
 
 ### Screenshot
+![desktop](https://github.com/Rasc3ta/result_summary_component/assets/109864964/3d85ffb6-2ba9-44f9-a8ed-305ac5b47a19)
+![mobile](https://github.com/Rasc3ta/result_summary_component/assets/109864964/9dec1cf0-bac0-4c87-b319-b474e439332a)
 
-![](./screenshots/mobile.png)
-![](./screenshots/desktop.png)
 
 ### Links
 
