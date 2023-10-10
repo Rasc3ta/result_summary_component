@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @font-face {
+        font-family: "hanken_groteskregular";
+        src: url("./assets/fonts/webfontkit-20231009-093536/hankengrotesk-variablefont_wght-webfont.woff2")
+            format("woff2"),
+          url("./assets/fonts/webfontkit-20231009-093536/hankengrotesk-variablefont_wght-webfont.woff")
+            format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .body {
+        font-family: hanken_groteskregular;
+        font-size: 18px;
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+
+      
+      @media (min-width: 375px) {
+        .top-box {
+          color: hsl(0, 0%, 100%);
+          background-image: linear-gradient(
+            hsl(252, 100%, 67%),
+            hsl(241, 81%, 54%)
+          );
+          border-radius: 0rem 0rem 2em 2em;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+  
+        .above-circle {
+          margin: 5% 0rem;
+        }
+        
+        .middle-circle {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+  
+          background-image: linear-gradient(
+            hsla(256, 72%, 46%, 1),
+            hsla(241, 72%, 46%, 0)
+          );
+          border-radius: 100%;
+          height: 35vw;
+          width: 35vw;
+        }
+  
+        .big76 {
+          font-size: 3em;
+          font-weight: 900;
+        }
+        .small100 {
+          font-size: .8em;
+        }
+        .transparent {
+          filter: opacity(.6);
+        }
+        
+        h2 {
+          margin-top: 1em;
+          margin-bottom: .25em;
+        }
+        
+        .relative-score {
+          font-size: .9em;
+          margin: 0rem 2em 2.5em;
+          text-align: center;
+  
+        }
+  
+  
+  
+        .scores {
+          list-style-type: none;
+          padding-left: 0rem;
+          display: flex;
+          flex-direction: column;
+        }
+  
+        .score-wrapper {
+          background-color: red;
+          padding: 1em;
+          margin: 0.25em;
+          border-radius: 0.75em;
+  
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+  
+        .score-wrapper.reaction {
+          background-color: hsl(0, 100%, 67%, 0.055);
+        }
+  
+        .field-name-reaction {
+          color: hsl(0, 100%, 67%);
+        }
+  
+        .field-name-reaction::before {
+          content: "";
+          padding: 1em;
+          background-image: url(./assets/images/icon-reaction.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+  
+        .score-wrapper.memory {
+          background-color: hsl(39, 100%, 56%, 0.055);
+        }
+  
+        .field-name-memory {
+          color: hsl(39, 100%, 56%);
+        }
+  
+        .field-name-memory::before {
+          content: "";
+          padding: 1em;
+          background-image: url(./assets/images/icon-memory.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+  
+        .score-wrapper.verbal {
+          background-color: hsl(166, 100%, 37%, 0.055);
+        }
+  
+        .field-name-verbal {
+          color: hsl(166, 100%, 37%);
+        }
+  
+        .field-name-verbal::before {
+          content: "";
+          padding: 1em;
+          background-image: url(./assets/images/icon-verbal.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+  
+        .score-wrapper.visual {
+          background-color: hsl(234, 85%, 45%, 0.055);
+        }
+  
+        .score-wrapper {
+          font-weight: bold;
+        }
+  
+        .field-name-visual {
+          color: hsl(234, 85%, 45%);
+        }
+  
+        .field-name-visual::before {
+          content: "";
+          padding: 1em;
+          background-image: url(./assets/images/icon-visual.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+  
+        .button {
+          font-size: 0.9em;
+          font-weight: bolder;
+          color: hsl(0, 0%, 100%, 0.8);
+          background-color: hsl(224, 30%, 27%);
+          width: auto;
+          padding: 1em;
+          border: none;
+          border-radius: 10em;
+          text-align: center;
+          text-decoration: none;
+        }
+  
+        .button:active {
+          background-image: linear-gradient(
+            hsl(252, 100%, 67%),
+            hsl(241, 81%, 54%)
+          );
+        }
+  
+  
+        .bottom-box {
+          display: flex;
+          flex-direction : column;
+          margin: 0em 1em;
+        }
+        h3 {
+          justify-self: flex-start;
+          margin-bottom: 0;
+        }
+        .button {
+          justify-self: center;
+        }
+
+
+        
+
+      }
+
+
+      @media (min-width: 769px) {
+        body {
+          width: 100%; 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .body {
+          width: 50%;
+          flex-direction: row;
+          /* margin: auto; */
+        }
+
+        .top-box {
+          border-radius: 2em;
+          width: 50%;
+        }
+
+        .middle-circle {
+          width: 10vw;
+          height: 10vw;
+        }
+
+        .bottom-box {
+          width: 45%;
+          margin-left: 5%;
+          padding-bottom: 3em;
+          padding-top: 1em;
+
+        }
+
+        
+      } 
+
+      /* @media (min-width: 800px) {
+
+        body {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 100vw;
+          min-height: 100vh;
+        }
+
+        .body {
+          height: 50%;
+          width: 50%;
+          flex-direction: row;
+
+          margin: auto;
+
+        }
+        .top-box {
+          width: 50%;
+          border-radius: 2em;
+          padding: 5vw 0em;
+        }
+
+        .bottom-box {
+          padding: 1em ;
+          width: 60%;
+          height: 100%;
+          align-self: center;
+        }
+
+        .scores {
+          height: 30vw;
+          justify-content: space-evenly;
+          
+        }
+        
+        h3 {
+          font-size: 1.5em;
+        }
+
+      } */
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="body">
+      <section class="top-box">
+        <p class="transparent above-circle">Your Result</p>
+        <div class="middle-circle">
+          <span class="big76">76</span>
+          <span class="small100 transparent">of 100</span>
+        </div>
+
+        <h2>Great</h2>
+        <p class="transparent relative-score">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </section>
+      <section class="bottom-box">
+        <h3>Summary</h3>
+        <ul class="scores">
+          <li class="score-wrapper reaction">
+            <span class="field-name-reaction">Reaction</span>
+            <span class="score">80 <span class="transparent">/ 100</span></span>
+          </li>
+          <li class="score-wrapper memory">
+            <span class="field-name-memory">Memory</span>
+            <span class="score">92 <span class="transparent">/ 100</span></span>
+          </li>
+          <li class="score-wrapper verbal">
+            <span class="field-name-verbal">Verbal</span>
+            <span class="score">61 <span class="transparent">/ 100</span></span>
+          </li>
+          <li class="score-wrapper visual">
+            <span class="field-name-visual">Visual</span>
+            <span class="score">72 <span class="transparent">/ 100</span></span>
+          </li>
+        </ul>
+
+        <a href="#" class="button">Continue</a>
+      </section>
+    </div>
+  </body>
+</html>
