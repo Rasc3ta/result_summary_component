@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://https://github.com/Rasc3ta/result_summary_component)
-- Live Site URL: [Add live site URL here](https://rasc3ta.github.io/result_summary_component)
+- Solution URL: https://https://github.com/Rasc3ta/result_summary_component
+- Live Site URL: https://rasc3ta.github.io/result_summary_component
 
 ### Built with
 
